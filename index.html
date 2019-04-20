@@ -29,37 +29,43 @@
 <p>Font behaviour depends on whether the font is embedded in a web page or inline. The iframe beside each image shows the SVG as a standalone page. Or click on an image to see it on its own, and to see whether the font loads.</p>
 
 <ul>
-    <li>SVG as <code>img</code>: No embedded font:<br>
+    <li>SVG as <code>img</code>: WOFF2 font base64-encoded in CSS (541KB):<br>
+        <a href="images/none.svg">
+            <img src="images/base64.svg">
+        </a>
+        <iframe src="images/base64.svg"></iframe>
+    </li>
+    <li>SVG as <code>img</code>: No embedded font (about 0.4KB):<br>
         <a href="images/none.svg">
             <img src="images/none.svg">
         </a>
         <iframe src="images/none.svg"></iframe>
     </li>
-    <li>SVG as <code>img</code>: Link to Google Fonts stylesheet with <code>xml-stylesheet</code> element:<br>
+    <li>SVG as <code>img</code>: Link to Google Fonts stylesheet with <code>xml-stylesheet</code> element (about 0.4KB):<br>
         <a href="images/link-gf.svg">
             <img src="images/link-gf.svg">
         </a>
         <iframe src="images/link-gf.svg"></iframe>
     </li>
-    <li>SVG as <code>img</code>: Import Google Fonts stylesheet with <code>@import</code> in <code>style</code> element:<br>
+    <li>SVG as <code>img</code>: Import Google Fonts stylesheet with <code>@import</code> in <code>style</code> element (about 0.4KB):<br>
         <a href="images/import-gf.svg">
             <img src="images/import-gf.svg">
         </a>
         <iframe src="images/import-gf.svg"></iframe>
     </li>
-    <li>SVG as <code>img</code>: Link to local font with <code>xml-stylesheet</code> element:<br>
+    <li>SVG as <code>img</code>: Link to local font with <code>xml-stylesheet</code> element (about 0.4KB):<br>
         <a href="images/link-local.svg">
             <img src="images/link-local.svg">
         </a>
         <iframe src="images/link-local.svg"></iframe>
     </li>
-    <li>SVG as <code>img</code>: Import local font with <code>@import</code> in <code>style</code> element:<br>
+    <li>SVG as <code>img</code>: Import local font with <code>@import</code> in <code>style</code> element (about 0.4KB):<br>
         <a href="images/import-local.svg">
             <img src="images/import-local.svg">
         </a>
         <iframe src="images/import-local.svg"></iframe>
     </li>
-    <li>Inline SVG with <code>xml-stylesheet</code> element linking to Google Fonts stylesheet:<br>
+    <li>Inline SVG with <code>xml-stylesheet</code> element linking to Google Fonts stylesheet (about 0.4KB):<br>
         <?xml-stylesheet type="text/css" href="https://fonts.googleapis.com/css?family=Kalam" ?>   
         <svg xmlns="http://www.w3.org/2000/svg" width="200" height="150" viewBox="0 0 400 300">
           <defs>
@@ -74,7 +80,7 @@
           <text transform="translate(0 200)">Test</text>
         </svg>
     </li>
-    <li>Inline SVG with <code>@import</code> of Google Fonts stylesheet:<br>
+    <li>Inline SVG with <code>@import</code> of Google Fonts stylesheet (about 0.4KB):<br>
         <svg xmlns="http://www.w3.org/2000/svg" width="200" height="150" viewBox="0 0 400 300">
           <defs>
             <style type="text/css">
@@ -89,7 +95,7 @@
           <text transform="translate(0 200)">Test</text>
         </svg>
     </li>
-    <li>Inline SVG with <code>xml-stylesheet</code> element linking to local stylesheet:<br>
+    <li>Inline SVG with <code>xml-stylesheet</code> element linking to local stylesheet (about 0.4KB):<br>
         <?xml-stylesheet type="text/css" href="../css/kalam.css" ?>   
         <svg xmlns="http://www.w3.org/2000/svg" width="200" height="150" viewBox="0 0 400 300">
           <defs>
@@ -104,7 +110,7 @@
           <text transform="translate(0 200)">Test</text>
         </svg>
     </li>
-    <li>Inline SVG with <code>@import</code> of local stylesheet:<br>
+    <li>Inline SVG with <code>@import</code> of local stylesheet (about 0.4KB):<br>
         <svg xmlns="http://www.w3.org/2000/svg" width="200" height="150" viewBox="0 0 400 300">
           <defs>
             <style type="text/css">
