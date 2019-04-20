@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="150" viewBox="0 0 400 300">
+  <defs>
+    <style type="text/css">
+      @import url('https://fonts.googleapis.com/css?family=Kalam');
+      text {
+        font-size: 5em;
+        font-family: "Kalam";
+      }
+    </style>
+  </defs>
+  <title>Import GF stylesheet</title>
+  <text transform="translate(0 200)">Test</text>
+</svg>

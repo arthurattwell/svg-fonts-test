@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test fonts in SVG</title>
+    <style type="text/css">
+        @import url('css/kalam.css');
+        body {
+            font-family: "Kalam";
+        }
+        li {
+            margin-bottom: 2em;
+        }
+        a {
+            text-decoration: none;
+        }
+        img, svg, iframe {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Testing fonts in SVG</h1>
+
+<p>This page shows options for adding fonts to SVG files. We want to find a method for adding fotns to SVG that gets us the font in the text on this page – Kalam – in the SVGs.</p>
+
+<p>The SVGs here are linked to in <code>img</code> elements.</p>
+
+<p>Font behaviour depends on whether the font is embedded in a web page or inline. The iframe beside each image shows the SVG as a standalone page. Or click on an image to see it on its own, and to see whether the font loads.</p>
+
+<ul>
+    <li>SVG as <code>img</code>: No embedded font:<br>
+        <a href="images/none.svg">
+            <img src="images/none.svg">
+        </a>
+        <iframe src="images/none.svg"></iframe>
+    </li>
+    <li>SVG as <code>img</code>: Link to Google Fonts stylesheet with <code>xml-stylesheet</code> element:<br>
+        <a href="images/link-gf.svg">
+            <img src="images/link-gf.svg">
+        </a>
+        <iframe src="images/link-gf.svg"></iframe>
+    </li>
+    <li>SVG as <code>img</code>: Import Google Fonts stylesheet with <code>@import</code> in <code>style</code> element:<br>
+        <a href="images/import-gf.svg">
+            <img src="images/import-gf.svg">
+        </a>
+        <iframe src="images/import-gf.svg"></iframe>
+    </li>
+    <li>SVG as <code>img</code>: Link to local font with <code>xml-stylesheet</code> element:<br>
+        <a href="images/link-local.svg">
+            <img src="images/link-local.svg">
+        </a>
+        <iframe src="images/link-local.svg"></iframe>
+    </li>
+    <li>SVG as <code>img</code>: Import local font with <code>@import</code> in <code>style</code> element:<br>
+        <a href="images/import-local.svg">
+            <img src="images/import-local.svg">
+        </a>
+        <iframe src="images/import-local.svg"></iframe>
+    </li>
+    <li>Inline SVG with <code>xml-stylesheet</code> element linking to Google Fonts stylesheet:<br>
+        <?xml-stylesheet type="text/css" href="https://fonts.googleapis.com/css?family=Kalam" ?>   
+        <svg xmlns="http://www.w3.org/2000/svg" width="200" height="150" viewBox="0 0 400 300">
+          <defs>
+            <style type="text/css">
+              text {
+                font-size: 5em;
+                font-family: "Kalam";
+              }
+            </style>
+          </defs>
+          <title>Link to Google Fonts stylesheet</title>
+          <text transform="translate(0 200)">Test</text>
+        </svg>
+    </li>
+    <li>Inline SVG with <code>@import</code> of Google Fonts stylesheet:<br>
+        <svg xmlns="http://www.w3.org/2000/svg" width="200" height="150" viewBox="0 0 400 300">
+          <defs>
+            <style type="text/css">
+              @import url('https://fonts.googleapis.com/css?family=Kalam');
+              text {
+                font-size: 5em;
+                font-family: "Kalam";
+              }
+            </style>
+          </defs>
+          <title>Import GF stylesheet</title>
+          <text transform="translate(0 200)">Test</text>
+        </svg>
+    </li>
+    <li>Inline SVG with <code>xml-stylesheet</code> element linking to local stylesheet:<br>
+        <?xml-stylesheet type="text/css" href="../css/kalam.css" ?>   
+        <svg xmlns="http://www.w3.org/2000/svg" width="200" height="150" viewBox="0 0 400 300">
+          <defs>
+            <style type="text/css">
+              text {
+                font-size: 5em;
+                font-family: "Kalam";
+              }
+            </style>
+          </defs>
+          <title>Link to local stylesheet</title>
+          <text transform="translate(0 200)">Test</text>
+        </svg>
+    </li>
+    <li>Inline SVG with <code>@import</code> of local stylesheet:<br>
+        <svg xmlns="http://www.w3.org/2000/svg" width="200" height="150" viewBox="0 0 400 300">
+          <defs>
+            <style type="text/css">
+              @import url('../css/kalam.css');
+              text {
+                font-size: 5em;
+                font-family: "Kalam";
+              }
+            </style>
+          </defs>
+          <title>Import local stylesheet</title>
+          <text transform="translate(0 200)">Test</text>
+        </svg>
+    </li>
+</ul>
+
+</body>
+</html>
