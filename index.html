@@ -17,6 +17,7 @@
             border: 1px solid black;
         }
     </style>
+    <script src="js/svg-inject.min.js"></script>
 </head>
 <body>
 
@@ -29,17 +30,20 @@
 <p>Font behaviour depends on whether the font is embedded in a web page or inline. The iframe beside each image shows the SVG as a standalone page. Or click on an image to see it on its own, and to see whether the font loads.</p>
 
 <ul>
-    <li>SVG as <code>img</code>: WOFF2 font base64-encoded in CSS (541KB):<br>
-        <a href="images/none.svg">
-            <img src="images/base64.svg">
-        </a>
-        <iframe src="images/base64.svg"></iframe>
+    <li>SVG as <code>img</code>: No embedded font (about 0.4KB): Click to inject inline SVG version with <a href="https://github.com/iconfu/svg-inject">SVG-Inject</a>.<br>
+        <img src="images/none.svg" onclick="SVGInject(this)">
     </li>
     <li>SVG as <code>img</code>: No embedded font (about 0.4KB):<br>
         <a href="images/none.svg">
             <img src="images/none.svg">
         </a>
         <iframe src="images/none.svg"></iframe>
+    </li>
+    <li>SVG as <code>img</code>: WOFF2 font base64-encoded in CSS (541KB):<br>
+        <a href="images/none.svg">
+            <img src="images/base64.svg">
+        </a>
+        <iframe src="images/base64.svg"></iframe>
     </li>
     <li>SVG as <code>img</code>: Link to Google Fonts stylesheet with <code>xml-stylesheet</code> element (about 0.4KB):<br>
         <a href="images/link-gf.svg">
